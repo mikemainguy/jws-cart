@@ -1237,6 +1237,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-js@npm:1.5.1":
+  version: 1.5.1
+  resolution: "base64-js@npm:1.5.1"
+  checksum: 10c0/f23823513b63173a001030fae4f2dabe283b99a9d324ade3ad3d148e218134676f1ee8568c877cd79ec1c53158dcf2d2ba527a97c606618928ba99dd930102bf
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -2200,6 +2207,13 @@ __metadata:
     "@pkgjs/parseargs":
       optional: true
   checksum: 10c0/f01d8f972d894cd7638bc338e9ef5ddb86f7b208ce177a36d718eac96ec86638a6efa17d0221b10073e64b45edc2ce15340db9380b1f5d5c5d000cbc517dc111
+  languageName: node
+  linkType: hard
+
+"jose@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "jose@npm:5.7.0"
+  checksum: 10c0/9dd2bfa61a839d857d4c4d842ba367a48552dbc93d315cd1c775b7d7855b0b3f589d72294f348cd3161eb559d20f2708549611ea4f1a46a83d49b891749593d9
   languageName: node
   linkType: hard
 
@@ -3303,6 +3317,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uint8-to-b64@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "uint8-to-b64@npm:1.0.2"
+  dependencies:
+    base64-js: "npm:1.5.1"
+  checksum: 10c0/63801c7b64b1775719c67c7d3263faa27ea6bb4710b05eece8f9c9f0da043a5efad640fa5daa482161db603c80e3f837645c017e23f53735245858dcbec52f46
+  languageName: node
+  linkType: hard
+
 "unique-filename@npm:^3.0.0":
   version: 3.0.0
   resolution: "unique-filename@npm:3.0.0"
@@ -3431,12 +3454,14 @@ __metadata:
     eslint: "npm:^8.57.0"
     eslint-plugin-react-hooks: "npm:^4.6.2"
     eslint-plugin-react-refresh: "npm:^0.4.7"
+    jose: "npm:^5.7.0"
     postcss: "npm:^8.4.38"
     postcss-preset-mantine: "npm:1.17.0"
     postcss-simple-vars: "npm:^7.0.1"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.2"
+    uint8-to-b64: "npm:^1.0.2"
     vite: "npm:^5.3.1"
   languageName: unknown
   linkType: soft
