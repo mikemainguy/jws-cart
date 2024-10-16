@@ -1,5 +1,5 @@
 import * as jose from 'jose';
-import {GenerateKeyPairResult, JWK, KeyLike} from 'jose';
+import {FlattenedJWS, GenerateKeyPairResult, JWK, KeyLike} from 'jose';
 import {v4 as uuidv4} from 'uuid';
 import stringify from "fast-json-stable-stringify";
 const iterations = 10000;
@@ -59,7 +59,7 @@ export default class JsonSignature {
             throw new Error('Key not found');
         }
         let input = '';
-        let jws = {signature: '', protected: '', payload: ''};
+        let jws = {signature: '', protected: '', payload: ''} as FlattenedJWS;
         const start = performance.now();
         console.log('start: ', start);
         for (let i = 0; i < iterations; i++) {
@@ -99,7 +99,7 @@ export default class JsonSignature {
             }
 
         } catch (e) {
-            return {error: e.message};
+            return {error: (e as Error).message};
         }
         if (!kid) {
             return {error: 'kid not found'};
@@ -123,7 +123,7 @@ export default class JsonSignature {
                 , rsaPublicKey, options);
             return JSON.parse(new TextDecoder().decode(payload));
         } catch (e) {
-            return {error: e.message};
+            return {error: (e as Error).message};
         }
 
     }

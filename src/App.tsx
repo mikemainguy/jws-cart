@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 import {Button, MantineProvider, Textarea, TextInput} from "@mantine/core";
 import {theme} from "./theme";
-import React, {useState} from "react";
+import {useState} from "react";
 import JsonSignature from "./jsonSignature.ts";
 
 const composer = new JsonSignature();
@@ -22,7 +22,7 @@ export default function App() {
             const signed = await composer.sign(key, json);
             setOutputText(JSON.stringify(signed));
         } catch (e) {
-            setOutputText(e.message);
+            setOutputText((e as Error).message);
         }
     }
     const verify = async () => {
