@@ -1,5 +1,5 @@
 import "@mantine/core/styles.css";
-import {Button, Input, MantineProvider, Textarea, TextInput} from "@mantine/core";
+import {Button, MantineProvider, Textarea, TextInput} from "@mantine/core";
 import {theme} from "./theme";
 import React, {useState} from "react";
 import JsonSignature from "./jsonSignature.ts";

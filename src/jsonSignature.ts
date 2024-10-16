@@ -112,7 +112,7 @@ export default class JsonSignature {
         let options = {};
         if (value.alg) {
             options = {algorithms: [value.alg]}
-        };
+        }
         try {
             const {
                 payload
